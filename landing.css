@@ -1,0 +1,50 @@
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.grid {
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 16px; /* Optional: Adds space between boxes */
+    width: 80%;
+    height: auto;
+    justify-items: center;
+    align-items: center;   
+}
+
+.grid > div {
+    width: 150px;  /* Initial width */
+    height: 100px;
+    transition: transform 0.4s ease-in-out, width 0.5s ease-in-out; /* Apply transition to both transform and width */
+}
+
+.grid > div:hover {
+    width: 90%;  /* Increase width on hover */
+}
+
+
+.blinking-text {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/* Light mode toggle classes */
