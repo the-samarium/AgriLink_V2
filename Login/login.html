@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-slate-900">
+    <section class="bg-gray-100 text-blue-700 p-6 rounded-lg flex m-5 max-w-2xl max-h-[400px] overflow-hidden shadow-lg ">
+        
+        <div id="right" class="w-full sm:w-1/2 mr-4 flex flex-col justify-center">
+            <!-- form -->
+            <h1 class="text-2xl font-bold text-emerald-400">Login</h1>
+            <div class="flex flex-row">
+            <p class="text-sm text-black mt-3">Don't have an account?</p>
+            <span>
+                <button id="sign_up" class="bg-transparent p-2 hover:scale-110 duration-300 ease-in-out">Sign Up</button>
+            </span>
+            </div>
+            <form id="loginForm" class="flex flex-col gap-4 mt-3">
+                <input required class="p-2 rounded-lg border" type="text" name="Name" placeholder="Name">
+                <input required class="p-2 rounded-lg border" type="email" name="Email" placeholder="Mail">
+                <input required class="p-2 rounded-lg border" type="password" name="Password" placeholder="Password">
+                <button class="bg-blue-900 p-2 rounded-xl text-black hover:scale-110 duration-300 ease-in-out">Login</button>
+            </form>
+        </div>
+
+        <div id="left" class="sm:flex hidden w-1/2 p-2 justify-center items-center z-10">
+            <!-- image -->
+            <img class="sm:block rounded-lg hidden object-cover w-full h-full" src="../Assets/download.jpeg" alt="image">
+        </div>
+        <h1>.</h1>
+    </section>
+    <script src="login.js"></script>
+</body>
+</html>

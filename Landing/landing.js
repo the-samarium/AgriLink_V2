@@ -13,3 +13,16 @@ function toggleAccordion(id) {
         icon.innerHTML = '+';
     }
 }
+
+let nav = document.querySelector("nav");
+let loginButtons = nav.querySelectorAll("button");
+
+loginButtons.forEach((button) => {
+    button.addEventListener('click', function() {
+        // Check if the clicked button is the login button
+        if (this.textContent.trim() === 'Login/Signup') {
+            window.location.href = 'http://127.0.0.1:3000/Login/login.html';
+            console.log('Login button clicked!');
+        }
+    });
+});
